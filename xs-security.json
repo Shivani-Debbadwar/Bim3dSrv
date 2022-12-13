@@ -1,0 +1,77 @@
+{
+    "xsappname": "Bim3dSrv",
+    "tenant-mode": "dedicated",
+    "description": "Security profile of called application",
+    "scopes": [
+        {
+            "name": "uaa.user",
+            "description": "UAA"
+        },
+        {
+            "name": "$XSAPPNAME.user",
+            "description": "User"
+        },
+        {
+            "name": "$XSAPPNAME.admin",
+            "description": "Administrator"
+        },
+        {
+            "name": "$XSAPPNAME.dummy",
+            "description": "Dummy"
+        }
+       
+    ],
+    "attributes": [
+        {
+            "name": "level",
+            "description": "level",
+            "valueType": "s"
+        }
+       
+    ],
+    "role-templates": [
+        {
+            "name": "Token_Exchange",
+            "description": "UAA",
+            "scope-references": [
+                "uaa.user",
+                "$XSAPPNAME.user"
+            ]
+        },
+        {
+            "name": "CA_User",
+            "description": "User",
+            "scope-references": [
+                "uaa.user",
+                "$XSAPPNAME.user"
+            ]
+        },
+        {
+            "name": "CA_Admin",
+            "description": "User",
+            "scope-references": [
+                "uaa.user",
+                "$XSAPPNAME.user",
+                "$XSAPPNAME.admin"
+            ]
+        },
+        {
+            "name": "DOAAdmin",
+            "scope-references": [
+                "uaa.user",
+                "$XSAPPNAME.user"
+            ],
+            "description": "DOAAdmin generated"
+        },
+        {
+            "name": "DOADisp",
+            "scope-references": [
+                "uaa.user",
+                "$XSAPPNAME.user"
+            ],
+            "description": " DOADisp generated"
+        }
+       
+    
+    ]
+}
