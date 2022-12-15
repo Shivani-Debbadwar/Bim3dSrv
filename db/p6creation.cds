@@ -75,3 +75,4 @@ entity p6schedule : cuid, managed {
     p6creationitems : Composition of many p6Creation
                           on p6creationitems.parentID = ID;
 }
+

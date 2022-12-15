@@ -25,3 +25,4 @@ service p6CreationServicetest  @(requires:'authenticated-user') {
 	 title : String(50);
 	}*/
 }
+

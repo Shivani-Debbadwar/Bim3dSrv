@@ -209,3 +209,4 @@ entity projectHistory : cuid, managed {
     endDate    : DateTime;
     createDate : Date;
 }
+
